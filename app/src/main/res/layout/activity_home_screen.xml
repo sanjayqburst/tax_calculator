@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreen">
+
+    <TextView
+        android:layout_marginTop="55dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello"
+        android:textSize="25sp"
+        android:id="@+id/welcome"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tax_info"/>
+    <EditText
+        android:layout_marginTop="45dp"
+        android:id="@+id/salaryAmount"
+        style="@style/editTextStyle"
+        android:textColor="#1a1a1a"
+        android:textColorHint="#070707"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="35dp"
+        android:background="@drawable/edit_text_style"
+        android:hint="@string/income"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal" />
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        android:id="@+id/clear"/>
+
+    <Button
+        android:layout_marginTop="40dp"
+        android:id="@+id/calculateTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate_tax" />
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/taxAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/net_tax_to_be_paid_rs_0" />
+    <Button
+
+        android:layout_marginTop="100dp"
+        android:id="@+id/logoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logout" />
+
+
+</LinearLayout>

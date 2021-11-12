@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Tax Calculator</string>
+    <string name="calculator">Calculator</string>
+    <string name="tax_calculator">Tax Calculator</string>
+    <string name="username">Username</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="income">Income</string>
+    <string name="calculate_tax">Calculate Tax</string>
+    <string name="net_tax_to_be_paid_rs_0">Net Tax to be paid Rs 0</string>
+    <string name="tax_info">Enter your salary and calculate the tax</string>
+    <string name="hello">hello</string>
+    <string name="clear">Clear</string>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/taxlogo"
+        android:contentDescription="@string/tax_calculator" />
+
+    <EditText
+        android:id="@+id/username"
+        style="@style/editTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="35dp"
+        android:background="@drawable/edit_text_style"
+        android:hint="@string/username"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/password"
+        style="@style/editTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="35dp"
+        android:background="@drawable/edit_text_style"
+        android:hint="@string/password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword" />
+    <Button
+        android:id="@+id/loginBtn"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"/>
+</LinearLayout>

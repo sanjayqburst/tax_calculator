@@ -1,6 +1,5 @@
 package com.example.taxcalculator
 
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -9,7 +8,6 @@ import android.widget.TextView
 import android.widget.Toast
 
 class HomeScreen : AppCompatActivity() {
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_screen)
@@ -23,18 +21,17 @@ class HomeScreen : AppCompatActivity() {
             val salary:EditText=findViewById(R.id.salaryAmount)
             salary.text.clear()
         }
-
-        welcome.text="Welcome ${sharedPreference.getValue("username")}"
+        welcome.text=getString(R.string.welcome,sharedPreference.getValue("username"))
 
         calculate.setOnClickListener {
             val salary:EditText=findViewById(R.id.salaryAmount)
             val amount=salary.text
             val taxAmount:TextView=findViewById(R.id.taxAmount)
             if (amount.isNotEmpty()){
-                val tax=String.format("%.2f", calculateTax(amount =amount.toString().toDouble())).toDouble()
-                taxAmount.text="Net Tax to be paid for Rs $amount is Rs $tax"
+                val tax= calculateTax(amount =amount.toString().toDouble())
+                taxAmount.text=getString(R.string.tax_amount,amount,tax)
             }else{
-                Toast.makeText(this,"Enter your salary",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,getString(R.string.salary),Toast.LENGTH_SHORT).show()
             }
         }
 

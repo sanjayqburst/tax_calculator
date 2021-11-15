@@ -12,4 +12,9 @@
     <string name="tax_info">Enter your salary and calculate the tax</string>
     <string name="hello">hello</string>
     <string name="clear">Clear</string>
+    <string name="fill_credentials">Enter username and password</string>
+    <string name="user_authentication">Username and Password do not match</string>
+    <string name="salary">Enter your salary</string>
+    <string name="welcome">Welcome %s</string>
+    <string name="tax_amount">Net Tax to be paid for Rs %s is \n Rs %.2f </string>
 </resources>

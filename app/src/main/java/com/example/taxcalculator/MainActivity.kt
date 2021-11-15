@@ -8,10 +8,12 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val splashScreen = installSplashScreen()
         setContentView(R.layout.activity_main)
 
         val loginBtn:Button=findViewById(R.id.loginBtn)
@@ -29,10 +31,10 @@ class MainActivity : AppCompatActivity() {
                     moveActivity(this, activity = HomeScreen(),username.text.toString())
                 }
                 else{
-                    Toast.makeText(this,"Username and Password do not match",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,getString(R.string.user_authentication),Toast.LENGTH_SHORT).show()
                 }
             }else{
-                Toast.makeText(this,"Enter username and password",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,getString(R.string.fill_credentials),Toast.LENGTH_SHORT).show()
             }
             }
 
